@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const connection = async (url)=>{
 
    try{
-     mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true});
+    await mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true});
         console.log('Database Connected Succesfully');
    }
    catch(err){
