@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema(
       max: 20,
       unique: true,
     },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
     Firstname: {
       type: String,
        
@@ -60,6 +64,6 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const  User =mongoose.model("User", UserSchema);
+const  User = mongoose.model("User", UserSchema);
 
 module.exports=User;
